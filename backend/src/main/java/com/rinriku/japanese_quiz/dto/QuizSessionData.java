@@ -4,7 +4,7 @@ import java.util.List;
 
 public record QuizSessionData(
         String questionId,
-        String questionNumber,
+        Integer questionNumber,
         String questionText,
         List<String> choices,
         String correctAnswer
