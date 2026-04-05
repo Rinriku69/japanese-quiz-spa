@@ -4,7 +4,7 @@ import java.util.List;
 
 public record QuizResource(
         String questionId,
-        Integer questionNumber,
+        int questionNumber,
         String questionText,
         List<ChoiceResource> choices
 ) {

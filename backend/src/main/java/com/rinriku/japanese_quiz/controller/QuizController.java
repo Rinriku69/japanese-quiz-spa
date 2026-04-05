@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 
 @RestController
@@ -22,6 +23,7 @@ public class QuizController {
     @GetMapping("/getquiz")
     List<QuizResource> getQuiz(){
         List<Character> questions = charRepo.findRandomCharacter(10);
+        AtomicInteger questionNumber = new AtomicInteger(1);
         return questions.stream().map(q ->
         {
             List<Character> othersChoices = charRepo.findRandomCharacter(4).stream().
@@ -40,9 +42,10 @@ public class QuizController {
           )).toList()) ;
 
           Collections.shuffle(choicesResource);
+
           return  new QuizResource(
                     "1234",
-                    1,
+                    questionNumber.getAndIncrement(),
                     q.getCharacter(),
                     choicesResource);
         }).toList();
