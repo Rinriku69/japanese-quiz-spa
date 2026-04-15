@@ -11,7 +11,7 @@ async function getQuiz(): Promise<MultipleChoicesQuiz[]>{
 export default async function Quiz(){
     const quizes: MultipleChoicesQuiz[] = await getQuiz()
     return (
-        <main>
+        <main >
             <h1 className="text-center">Japanese Language Quiz</h1>
             <QuizContainer quizes={quizes} />
         </main>
