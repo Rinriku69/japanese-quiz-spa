@@ -37,7 +37,7 @@ export default function QuizContainer({
               userAnswers[currentQuiz.questionNumber] === choice.id
                 ? "bg-blue-500 text-white"
                 : "bg-white"
-            } text-black hover:bg-gray-300 transition-color delay-100 `}
+            } text-black hover:bg-gray-300 transition-color  `}
           >
             {choice.character} ({choice.romaji})
           </button>
