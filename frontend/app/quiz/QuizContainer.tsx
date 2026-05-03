@@ -20,7 +20,7 @@ export default function QuizContainer({
   };
 
   return (
-    <div className="flex flex-col p-4 border-4 border-red-300 h-svh gap-20">
+    <div className="flex flex-col p-4  gap-10 ">
       <h2 className="text-xl font-bold align-center">
         Qustion {currentQuiz.questionNumber}:
       </h2>
@@ -66,7 +66,7 @@ export default function QuizContainer({
           </button>
         ) : (
           <button
-            onClick={() => console.log("ส่งคำตอบ:", userAnswers)}
+            onClick={() => console.log("Submit:", userAnswers)}
             className="px-4 py-2 bg-green-500 text-white rounded"
           >
             Submit
