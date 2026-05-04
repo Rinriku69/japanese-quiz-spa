@@ -12,3 +12,18 @@ export interface JapaneseCharacter {
     romaji: string;
     type: string;
 }
+
+
+export interface MultipleChoicesQuiz {
+    questionId: string;
+    questionNumber: number;
+    questionText: string;
+    choices: Choice[];
+}
+
+export interface Choice {
+    id: number;
+    character: string;
+    romaji: string;
+    type: string;
+}
