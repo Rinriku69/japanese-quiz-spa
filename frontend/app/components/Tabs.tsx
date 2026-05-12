@@ -16,6 +16,11 @@ export default function Tabs() {
             <span className="nav-btn">Word</span>
           </Link>
         </li>
+        <li>
+          <Link href="/characters">
+            <span className="nav-btn">Characters</span>
+          </Link>
+        </li>
       </ul>
     </nav>
   );

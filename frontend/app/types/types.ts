@@ -2,9 +2,10 @@ export interface JapaneseWord {
     id: number;
     hiragana: string;
     kanji: string | null;
-    meaning: string;
     romaji: string;
+    meaning: string;
 }
+
 
 export interface JapaneseCharacter {
     id: number;
@@ -13,6 +14,13 @@ export interface JapaneseCharacter {
     type: string;
 }
 
+export interface JapaneseCharacterResponse{
+    data: JapaneseCharacter[];
+}
+
+export interface JapaneseWordResponse{
+    data: JapaneseWord[];
+}
 
 export interface MultipleChoicesQuiz {
     questionId: string;
